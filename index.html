@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Fábio Júnior</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="#inicio">Início</a><a href="#sobre-mim">Sobre mim</a><a href="#projetos">Projetos</a><a href="#habilidades">Habilidades</a>
+    </nav>
+
+    <main>
+        <section class="inicio" id="inicio">
+            <img src="photos/img-inicio.jpg" alt="coding" class="img-wallpaper" id="img-inicio">
+            <div class="texts">
+                <div class="wrapper">
+                    <h1 class="typing">Fábio Júnior</h1>
+                </div>
+                <div class="dev">
+                    <h2 class="text">Desenvolvedor <span class="auto-type"></span></h2>
+                </div>
+            </div>
+            <div class="color-change">
+                
+                <span class="color-themes">
+                    <h1>Faça seu próprio tema!</h1>
+                    <label for="style1"><p>Cor da fonte: </p><input type="color" class="style" id="style1"></label>
+                    <label for="style2"><p>Cor do fundo: </p><input type="color" class="style" id="style2"></label>                      
+                </span>
+                <span class="color-themes">
+                    <button class="button" onclick="colorChange()">Trocar para seu tema</button>
+                    <button class="button" onclick="colorChange(`dark`)">Tema escuro</button>
+                    <button class="button" onclick="colorChange(`white`)">Tema claro</button>
+                </span>
+            </div>
+        </section>
+
+        <section class="sobre-mim" id="sobre-mim">
+            <div class="windows">
+                <img src="photos/win/windows11.jpg" alt="windows11 wallpaper" class="img-wallpaper" id="windows-wallpaper">
+
+                <div class="open-tab whatsapp">
+                    <div class="tab-header"><img src="photos/win/whatsapp.png" alt="whatsapp"> Whatsapp <span class="close" onclick="tab(`whatsapp`,`none`)">X</span></div>
+                    <p>(21)982491902</p>
+                    <button onclick="copyToClipboard('21982491902','number')">Copiar Email</button>
+                    <span class="copy cpNumber">Copiado!</span>
+                </div>   
+                <div class="open-tab gmail">
+                    <div class="tab-header"><img src="photos/win/Gmail-Icon.png" alt="Gmail"> Email - Gmail <span class="close" onclick="tab(`gmail`,`none`)">X</span></div>
+                    <p>dev.fabio.junior@gmail.com</p>
+                    <button onclick="copyToClipboard('dev.fabio.junior@gmail.com','email')">Copiar Email</button>
+                    <span class="copy cpEmail">Copiado!</span>
+                </div>   
+                <div class="open-tab note">
+                    <div class="tab-header"><img src="photos/win/bloco-de-notas-novo-icone.png" alt="note" > Bloco de notas <span class="close" onclick="tab(`note`,`none`)">X</span></div>
+                    <div class="note-text">
+                        <h1>Olá mundo</h1>
+                        <p>Meu nome é Fábio Júnior, sou de Niterói RJ, cursando 2º período de Sistemas de Informação na Unilasalle-RJ.</p>
+                        <p>Dei início a faculdade no meio de 2022 e desde então me apaixonei pela área e passei a focar grande parte do meu tempo livre aos estudos!</p>
+                        <p>Quando entrei para faculdade foi um tiro no escuro, mal sabia oque era programação, agora vejo muito progresso em todos os projetos que eu faço!</p>
+                    </div>
+                </div>   
+                <div class="open-tab edge">
+                    <div class="tab-header"><img src="photos/win/microsoft-edge-logo.png" alt="microsoft-edge-logo" > Microsoft edge - Linkedin - fabiojr0 <span class="close" onclick="tab(`edge`,`none`)">X</span></div>
+                    <a href="https://www.linkedin.com/in/fabiojr0/" target="_blank"><img src="photos/win/linkedin-edge.png" alt="Linkedin" class="linkendin-edge"></a>
+                </div> 
+
+                <div class="windows-taskbar">
+                    <span class="vazio"></span>
+                    <span class="windows-icons">
+                        <img src="photos/win/windows-logo.png" alt="windows logo">
+                        <img src="photos/win/lupa.png" alt="lupa">
+                        <img src="photos/win/microsoft-edge-logo.png" alt="microsoft edge logo" onclick="tab(`edge`,`block`)" class="openable" >
+                        <img src="photos/win/folder.png" alt="explore folder">
+                        <img src="photos/win/bloco-de-notas-novo-icone.png" alt="bloco de notas" onclick="tab(`note`,`block`)" class="openable" >
+                        <img src="photos/win/whatsapp.png" alt="whatsapp" onclick="tab(`whatsapp`,`block`)" class="openable" >
+                        <img src="photos/win/Gmail-Icon.png" alt="Gmail Icon" onclick="tab(`gmail`,`block`)" class="openable" >
+                    </span>
+                    <span class="windows-utilities">
+                        <img src="photos/win/arrow.png" alt="up arrow">
+                        <img src="photos/win/wifi.png" alt="wifi">
+                        <img src="photos/win/audio.png" alt="audio speaker">
+                        <img src="photos/win/full-battery.png" alt="full-battery">
+                        <div class="date">
+                            <p class="hour">10:10</p>
+                            <p class="day">17/03/2003</p>
+                        </div>
+                    </span>
+                    
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="projetos" id="projetos">
+            <div class="container">
+                <a class="box" href="https://projetinho-login.fabiojunior18.repl.co/" target="_blank">
+                    <img src="photos/projects/Login.png" alt="" onmouseenter="showInfosProjects(0)">
+                </a>
+                <a class="box" href="https://projetinho-jogo-da-velha.fabiojunior18.repl.co/" target="_blank">
+                    <img src="photos/projects/TicTacToe.png" alt="" onmouseenter="showInfosProjects(1)">
+                </a>
+                <a class="box" href="https://projetinho-raposas.fabiojunior18.repl.co/" target="_blank">
+                    <img src="photos/projects/Foxes.png" alt="" onmouseenter="showInfosProjects(2)">
+                </a>
+                <a class="box" href="https://projetinho-to-do-list.fabiojunior18.repl.co/" target="_blank">
+                    <img src="photos/projects/ToDo.png" alt="" onmouseenter="showInfosProjects(3)">
+                </a>
+                <a class="box" href="https://projetinho-calculadora.fabiojunior18.repl.co/" target="_blank">
+                    <img src="photos/projects/Calculator.png" alt="" onmouseenter="showInfosProjects(4)">
+                </a>
+                <a class="box" href="https://consumo-de-apis-com-fetch.fabiojunior18.repl.co/" target="_blank">
+                    <img src="photos/projects/Apis.png" alt="" onmouseenter="showInfosProjects(5)">
+                </a>
+            </div>
+            <span class="infos-projetos"></span>
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <div class="habilidades-items">
+                <h1>Habilidades</h1>
+                <div class="linha">
+                    <div class="tecnologia">
+                        <h1>HTML</h1>
+                        <img src="photos/tecnologias/html.png" alt="purple html">
+                    </div>
+                    <div class="tecnologia">
+                        <h1>CSS</h1>
+                        <img src="photos/tecnologias/css-3.png" alt="purple css">
+                    </div>
+                    <div class="tecnologia">
+                        <h1>JavaScript</h1>
+                        <img src="photos/tecnologias/js.png" alt="purple javascript">
+                    </div>
+                    <div class="tecnologia">
+                        <h1>Python</h1>
+                        <img src="photos/tecnologias/python.png" alt="purple python">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="tecnologia">
+                        <h1>Postgre</h1>
+                        <img src="photos/tecnologias/postgre.png" alt="purple postgre">
+                    </div>
+                    <div class="tecnologia">
+                        <h1>Sql Server</h1>
+                        <img src="photos/tecnologias/sql-server.png" alt="purple sql-server">
+                    </div>
+                    <div class="tecnologia">
+                        <h1>C#</h1>
+                        <img src="photos/tecnologias/c-sharp.png" alt="purple c-sharp">
+                    </div>
+                    <div class="tecnologia">
+                        <h1>Github</h1>
+                        <img src="photos/tecnologias/github.png" alt="purple github">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>Direitos reservados Fábio Júnior 2023. ©</h2> 
+        <h2>Email para contato: dev.fabio.junior@gmail.com</h2>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/fabiojr0/" target="_blank"><img src="photos/tecnologias/Linkedin-Icon.png" alt="linkedin"></a>
+            <a href="https://github.com/fabiojr0" target="_blank"><img src="photos/tecnologias/github.png" alt="github"></a>
+            <a href="./photos/curriculo_fabio_junior.pdf" target="_blank"><img src="photos/cv.png" alt="cv"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+</html>
