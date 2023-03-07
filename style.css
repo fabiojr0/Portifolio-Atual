@@ -12,8 +12,6 @@
     font-family: 'Roboto',sans-serif;
 }
 
-
-
 body {
     background-color: var(--fundo);
     height: 100%;
@@ -52,8 +50,11 @@ nav {
     -webkit-backdrop-filter: blur( 1px );
 }
 
-nav a, .inicio h1, .inicio h2, .color-change p {
-    color: white;
+.inicio h1, .inicio h2, .color-change p {
+    color: #ffffff;
+}
+nav a {
+  color: var(--fonte);
 }
 
 section {
@@ -65,7 +66,7 @@ section {
 .img-wallpaper {
     width: 100%;
     height: 100%;
-    filter: blur(3px);
+    filter: blur(7px);
     z-index:-10;
     position: absolute;
     object-fit: cover;
