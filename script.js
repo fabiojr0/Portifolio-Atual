@@ -9,12 +9,15 @@ var typed = new Typed(".auto-type", {
 function colorChange(theme="cor") {
     var corFonte
     var corFundo
+    var nav = document.querySelector("nav")
     if (theme == "dark") {
         corFonte = "#ffffff";
         corFundo = "#010718";
+        nav.style.backgroundColor = "rgba(255, 255, 255, 0.048)";
     }else if (theme == "white"){
-        corFonte = "black";
+        corFonte = "#8200FF";
         corFundo = "#ffffff";
+        nav.style.backgroundColor = "rgba(255, 255, 255, .5)";
     }else{
         corFonte = document.querySelector("#style1").value;
         corFundo = document.querySelector("#style2").value;
