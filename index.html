@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto:wght@500&display=swap"
     rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="photos/favicon-32x32.png">
+    
 </head>
 
 <body>
@@ -56,16 +57,18 @@
         <div class="open-tab whatsapp">
           <div class="tab-header"><img src="photos/win/whatsapp.png" alt="whatsapp"> Whatsapp <span class="close"
               onclick="tab(`whatsapp`,`none`)">X</span></div>
-          <p>(21)982491902</p>
-          <button onclick="copyToClipboard('21982491902','number')">Copiar</button>
-          <span class="copy cpNumber">Copiado!</span>
+              <div class="tab-content">
+                <p>(21)982491902</p>
+                <button onclick="copyToClipboard('21982491902','number')" class="numberCopy">Copiar número</button>
+              </div>      
         </div>
         <div class="open-tab gmail">
           <div class="tab-header"><img src="photos/win/Gmail-Icon.png" alt="Gmail"> Email - Gmail <span class="close"
               onclick="tab(`gmail`,`none`)">X</span></div>
-          <p>dev.fabio.junior@gmail.com</p>
-          <button onclick="copyToClipboard('dev.fabio.junior@gmail.com','email')">Copiar</button>
-          <span class="copy cpEmail">Copiado!</span>
+              <div class="tab-content">
+                <p>dev.fabio.junior@gmail.com</p>
+                <button onclick="copyToClipboard('dev.fabio.junior@gmail.com','email')" class="emailCopy">Copiar email</button>
+              </div>                    
         </div>
         <div class="open-tab note">
           <div class="tab-header"><img src="photos/win/bloco-de-notas-novo-icone.png" alt="note"> Bloco de notas <span
@@ -130,8 +133,8 @@
         <a class="box" href="https://projetinho-to-do-list.fabiojunior18.repl.co/" target="_blank">
           <img src="photos/projects/ToDo.png" alt="" onmouseenter="showInfosProjects(3)">
         </a>
-        <a class="box" href="https://projetinho-calculadora.fabiojunior18.repl.co/" target="_blank">
-          <img src="photos/projects/Calculator.png" alt="" onmouseenter="showInfosProjects(4)">
+        <a class="box" href="https://delicias-da-carne-exotica.fabiojunior18.repl.co/" target="_blank">
+          <img src="photos/projects/carne.png" alt="" onmouseenter="showInfosProjects(4)">
         </a>
         <a class="box" href="https://consumo-de-apis-com-fetch.fabiojunior18.repl.co/" target="_blank">
           <img src="photos/projects/Apis.png" alt="" onmouseenter="showInfosProjects(5)">
@@ -193,6 +196,8 @@
     </div>
   </footer>
 
+
+  
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="script.js"></script>
 </body>

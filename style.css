@@ -2,6 +2,18 @@
     --fundo: #010718;
     --fonte: #ffffff;
 }
+html {
+  scroll-snap-type: y mandatory;
+}
+
+/* O Safari exige a definição no body */
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll {
+  scroll-snap-align: start;
+}
 
 * {
     margin: 0;
@@ -15,8 +27,9 @@
 body {
     background-color: var(--fundo);
     height: 100%;
-    width: 100vw;
+    width: 100%;
     transition:.5s;
+    overflow-x: hidden; 
 }
 
 ::-webkit-scrollbar {
@@ -31,9 +44,6 @@ body {
     background-color: var(--fonte);
     position: absolute;
 }
-
-	
-body { overflow-x: hidden; }
 
 nav {
     width: 100%;
@@ -58,7 +68,7 @@ nav a {
 }
 
 section {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
 }
@@ -67,9 +77,10 @@ section {
     width: 100%;
     height: 100%;
     filter: blur(7px);
-    z-index:-10;
+    z-index: -10;
     position: absolute;
     object-fit: cover;
+    opacity: .7;
 }
 
 
@@ -225,7 +236,7 @@ button:hover {
     bottom: 0;
     width:100%;
     height:40px;
-    background-color: #D7DCEA;
+    background-color: rgba(255, 255, 255, .5);
     filter: blur(0.1px);
 
     display: flex;
@@ -272,7 +283,7 @@ button:hover {
 
 .open-tab button {
     color: #010718;
-    width: 60%;
+    width: 140px;
     height: 40px;
 }
 
@@ -285,14 +296,14 @@ button:hover {
 }
 
 .openable:hover {
-    background-color: white;
+    background-color: rgba(221, 221, 221, .5);
     border-radius: 5px;
 }
 
 .tab-header {
-    background-color: #D7DCEA;
+    background-color: transparent;
     width: 100%;
-    height:20%;
+    height:30px;
     color: #010718;
     position: relative;
     display: flex;
@@ -300,28 +311,35 @@ button:hover {
 }
 
 .tab-header img {
-    width: 30%;
-    height: 100%;
-    object-fit: cover;
+    width: 30px;
+    height: 30px;
 }
 
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+
 .close {
-    color: #010718;
-    background-color: red;
     position: absolute;
     right: 0;
     top: 0;
-    width: 10%;
-    height: 100%;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .whatsapp {
     width: 18%;
-    height: 18%;
+    height: 25%;
     top: 1%;
     left: 1%;
     user-select: text;
@@ -329,11 +347,16 @@ button:hover {
 
 .gmail {
     width: 18%;
-    height: 18%;
-    top: 22%;
+    height: 25%;
+    top: 27%;
     left:1%;
     font-size: .9rem;
     user-select: text;
+}
+
+.gmail p {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .note {
@@ -345,18 +368,8 @@ button:hover {
     user-select: text;
 }
 
-.note .tab-header, .edge .tab-header {
-    height: 5%;
-}
 
-.note .tab-header img {
-    height: 40%;
-    width: 10%;
-}
-.edge .tab-header img {
-    height:90%;
-    width: 10%;
-}
+
 
 .note-text h1 {
     color: #010718;
@@ -380,7 +393,7 @@ button:hover {
 
 .linkendin-edge {
     width: 100%;
-    height: 95%;
+    height: 93%;
     
 }
 
@@ -423,6 +436,10 @@ button:hover {
     flex-direction: column;
 }
 
+.projetos h1 a {
+    color: #8200FF;
+}
+
 .habilidades-items, .habilidades{
     display: flex;
     align-items: center;
@@ -460,12 +477,13 @@ button:hover {
 }
 
 .tecnologia h1 {
-    color: #8200FF;
+    color: #FFF;
 }
 
 .tecnologia img {
     width: 100px;
 }
+
 
 footer {
     width: 100%;
