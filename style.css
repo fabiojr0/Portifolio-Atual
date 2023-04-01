@@ -24,6 +24,10 @@ body {
     font-family: 'Roboto',sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: var(--fundo);
     height: 100%;
@@ -88,6 +92,11 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-image: url("photos/img-inicio.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .wrapper {
@@ -276,7 +285,7 @@ button:hover {
 .open-tab {
     background-color: white;
     border: 2px solid #5a5d6c;
-    border-radius: 5px;
+    border-radius: 10px;
     position: absolute;
     resize: both;
 }
@@ -304,10 +313,18 @@ button:hover {
     background-color: transparent;
     width: 100%;
     height:30px;
-    color: #010718;
+    margin-left: 5px;
+    margin-top:5px;
     position: relative;
     display: flex;
     align-items: center;
+}
+
+.tab-header h2 {
+    color: #010718;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 10px;
 }
 
 .tab-header img {
@@ -388,13 +405,15 @@ button:hover {
     top: 1%;
     left: 59%;
     user-select: text;
-    object-fit: cover;
+    
 }
 
 .linkendin-edge {
     width: 100%;
     height: 93%;
-    
+    overflow: hidden;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .copy {
@@ -437,7 +456,7 @@ button:hover {
 }
 
 .projetos h1 a {
-    color: #8200FF;
+    color: rgb(130, 0, 255);
 }
 
 .habilidades-items, .habilidades{
@@ -489,15 +508,13 @@ footer {
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: space-between  ;
+    justify-content: space-around;
     align-items: center;
     gap: 30px;
-    z-index: 999;
-    font-size:1.2rem;
+    z-index: 999;   
     background: rgba(255, 255, 255, 0.048);
     backdrop-filter: blur( 1.5px );
     -webkit-backdrop-filter: blur( 1px );
-    font-size: .8rem;
 }
 
 footer img {
@@ -518,3 +535,6 @@ footer img:hover {
     width: 20%;
 }
 
+footer * {
+    font-size:1.4rem;
+}
