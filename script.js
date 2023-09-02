@@ -88,28 +88,20 @@ function copyToClipboard(txt, tab) {
 function showInfosProjects(projectIndex) {
   const infos = [
     {
-      title: "Tela de login",
-      description: "Validação de formulário atráves de JavaScript"
+      title: "Pipocando Filmes",
+      description: "Projeto React - Tailwind , consumindo APIs de filme da OMDB e TMDB."
     },
     {
-      title: "Jogo da Velha",
-      description: "Feito com JavaScript, jogável com 2 pessoas"
+      title: "Flor do Dia",
+      description: "Projeto feito como trabalho para a faculdade, ideia foi fazer o front-end de uma floricultura fictícia."
     },
     {
-      title: "Raposas animais fantásticos",
-      description: "Site numa pegada mais front-end para treinar técnicas de design"
-    },
-    {
-      title: "To-Do List",
-      description: "C.R.U.D feito com JavaScript"
+      title: "Marvelous",
+      description: "Projeto Tailwind, consumindo API da Marvel."
     },
     {
       title: "Delícias da carne exótica",
-      description: "Uma releitura do site <a href='https://deliciasdacarn8.wixsite.com/meusite' target='_blank'>Delícias da carne exótica</a> feito para um trabalho da faculdade"
-    },
-    {
-      title: "Cotação de moedas e busca por cep",
-      description: "Consumo de APIs usando fetch {awesomeapi e viacep}"
+      description: "Uma releitura do site <a href='https://deliciasdacarn8.wixsite.com/meusite' target='_blank'>Delícias da carne exótica</a> feito para um trabalho da faculdade."
     }
   ]
   const project = infos[projectIndex];
